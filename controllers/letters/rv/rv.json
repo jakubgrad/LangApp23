@@ -1,0 +1,4 @@
+{"words":[
+{"senses": [{"links": [["Rouva", "rouva#Finnish"], ["Mrs", "Mrs"]], "glosses": ["Abbreviation of Rouva (“Mrs”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "Rouva", "extra": "Mrs"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "noun"}, "expansion": "Rva"}], "word": "Rva", "lang": "Finnish", "lang_code": "fi"},
+{"senses": [{"links": [["Mrs", "Mrs"], ["rouva", "rouva#Finnish"]], "glosses": ["Mrs; Abbreviation of rouva (“mistress, madame”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "rouva", "extra": "mistress, madame"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "nouns", "head": "", "sort": "", "g": "", "cat2": ""}, "expansion": "rva"}, {"name": "fi-noun", "args": {}, "expansion": "rva"}], "word": "rva", "lang": "Finnish", "lang_code": "fi"}
+]}

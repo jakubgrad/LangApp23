@@ -1,0 +1,4 @@
+{"words":[
+{"senses": [{"links": [["vpk", "vpk#Finnish"]], "glosses": ["Alternative form of vpk"], "tags": ["alt-of", "alternative"], "alt_of": [{"word": "vpk"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "noun"}, "expansion": "VPK"}], "word": "VPK", "lang": "Finnish", "lang_code": "fi"},
+{"senses": [{"links": [["vapaapalokunta", "vapaapalokunta#Finnish"]], "glosses": ["Abbreviation of vapaapalokunta (“volunteer fire department”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "vapaapalokunta", "extra": "volunteer fire department"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "noun"}, "expansion": "vpk"}], "word": "vpk", "lang": "Finnish", "lang_code": "fi", "synonyms": [{"word": "VPK"}]}
+]}

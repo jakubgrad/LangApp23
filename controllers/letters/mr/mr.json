@@ -1,0 +1,4 @@
+{"words":[
+{"senses": [{"links": [["miljardi", "miljardi#Finnish"]], "glosses": ["Abbreviation of miljardi (“10⁹”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "miljardi", "extra": "10⁹"}], "categories": ["Finnish lemmas", "Finnish numerals", "Finnish terms spelled with ."]}], "pos": "num", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "numeral"}, "expansion": "mrd."}], "word": "mrd.", "lang": "Finnish", "lang_code": "fi"},
+{"senses": [{"links": [["mrd.", "mrd.#Finnish"]], "glosses": ["Alternative form of mrd."], "tags": ["alt-of", "alternative"], "alt_of": [{"word": "mrd."}], "categories": ["Finnish lemmas", "Finnish numerals"]}], "pos": "num", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "numeral"}, "expansion": "mrd"}], "word": "mrd", "lang": "Finnish", "lang_code": "fi"}
+]}

@@ -1,0 +1,62 @@
+h1 {
+  color: green;
+  font-style: italic;
+}
+
+.entry {
+  color: grey;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+container {
+  display: flex;
+  justify-content: center; /* Center both content and box horizontally */
+  padding: 20px;
+  margin-top: 60px; /* Add spacing between the top navigation bar and the content */
+}
+
+.content {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 50%;
+  margin-right: 10px; /* Add some space between content and box */
+  border: 1px solid #ccc; /* Add a border to the content */
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for the content */
+}
+
+.box {
+  margin-top: 60px;
+  width: 45%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc; /* Add a border to the box */
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for the box */
+}
+
+/* Style the text in both boxes */
+.content h1,
+.box h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content p,
+.box p {
+  font-size: 22px;
+  line-height: 1.6;
+}

@@ -1,0 +1,68 @@
+.top-navbar {
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s; /* Add smooth transition when showing/hiding */
+}
+
+.top-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top-navbar li {
+  margin: 0 15px;
+}
+
+.top-navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+  transition: color 0.3s;
+}
+
+.top-navbar a:hover {
+  color: #f0f0f0;
+}
+
+/* Hide the navigation bar when scrolling down */
+.hidden {
+  top: -80px; /* Change this value to adjust how much the navbar disappears */
+}
+
+/* Add space between the top navbar and content */
+.content {
+  margin-top: 60px; /* Adjust this value as needed */
+}
+
+/* Add space between the two boxes */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content {
+  width: 50%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.box {
+  width: 45%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}

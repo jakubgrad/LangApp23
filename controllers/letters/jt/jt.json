@@ -1,0 +1,5 @@
+{"words":[
+{"senses": [{"links": [["jotakin", "jotakin#Finnish"]], "glosses": ["Abbreviation of jotakin."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "jotakin"}], "categories": ["Finnish non-lemma forms", "Finnish pronoun forms"]}], "pos": "pron", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "pronoun form"}, "expansion": "jtak"}], "word": "jtak", "lang": "Finnish", "lang_code": "fi"},
+{"senses": [{"links": [["jtkn", "jtkn#Finnish"]], "glosses": ["Misspelling of jtkn."], "tags": ["alt-of", "misspelling"], "alt_of": [{"word": "jtkn"}], "categories": ["Finnish misspellings", "Finnish non-lemma forms"]}], "pos": "pron", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "misspelling"}, "expansion": "jtk"}], "word": "jtk", "lang": "Finnish", "lang_code": "fi"},
+{"senses": [{"links": [["sthg", "sthg"], ["jotakin", "jotakin#Finnish"]], "glosses": ["sthg; Acronym of jotakin."], "categories": ["Finnish lemmas", "Finnish pronouns"]}], "pos": "pron", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "pronoun"}, "expansion": "jtkn"}], "word": "jtkn", "lang": "Finnish", "lang_code": "fi"}
+]}

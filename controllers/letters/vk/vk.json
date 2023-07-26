@@ -1,0 +1,4 @@
+{"words":[
+{"senses": [{"links": [["viikonloppu", "viikonloppu#Finnish"]], "glosses": ["Abbreviation of viikonloppu (“weekend”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "viikonloppu", "extra": "weekend"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "noun"}, "expansion": "vkl"}], "word": "vkl", "lang": "Finnish", "lang_code": "fi", "synonyms": [{"word": "vklp"}]},
+{"senses": [{"links": [["viikko", "viikko#Finnish"]], "glosses": ["Abbreviation of viikko (“week”)."], "tags": ["abbreviation", "alt-of"], "alt_of": [{"word": "viikko", "extra": "week"}], "categories": ["Finnish lemmas", "Finnish nouns"]}], "pos": "noun", "head_templates": [{"name": "head", "args": {"1": "fi", "2": "noun"}, "expansion": "vko"}], "word": "vko", "lang": "Finnish", "lang_code": "fi"}
+]}
