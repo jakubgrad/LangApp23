@@ -1,6 +1,6 @@
 const notesRouter = require('express').Router()
 const Blog = require('../models/blog')
-const axios = require('axios');
+import axios from 'axios'
 
 notesRouter.get('/', async (request, response) => {
 	const blogs = await Blog.find({})
