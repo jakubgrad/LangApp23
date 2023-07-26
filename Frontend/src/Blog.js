@@ -6,16 +6,16 @@ import Word from './Word'
 import axios from 'axios'
 
 const Blog = (props) => {
-  const {chosenWord, setChosenWord } = useState('')
+  const [chosenWord, setChosenWord ] = useState('')
+  const [boxOnTheRight, setBoxOnTheRight ] = useState('')
+  console.log(boxOnTheRight);
   const exampleBook = props.text
   console.log("blog", exampleBook);
   const fetchWordDescription = (word) => {
     entryService
     .getWord(word)
     .then(response => {
-      console.log(response)
       if( response === undefined) {
-        //console.log("undefined!!");
         console.log("Could not fetch word description using this form of the word", word)
       const endpoint = `http://127.0.0.1:5000/pygetword/${encodeURI(word)}`;
       axios.get(endpoint)
@@ -32,6 +32,9 @@ const Blog = (props) => {
         .catch(err => {
           console.error('Error occurred again', err);
         });
+      } else {
+        console.log("Response from engine", response)
+        setBoxOnTheRight(JSON.stringify(response))
       }
     })
     .catch(err => {
@@ -54,8 +57,8 @@ console.log("caught an error in connecting through entryService");
         {/* Add more paragraphs as needed */}
       </div>
       <div className="box">
-        <h2>Box on the Right</h2>
-        <p>This is the box content.</p>
+        <h2>{boxOnTheRight}Box on the right</h2>
+        <p>bb{boxOnTheRight}</p>
       </div>
     </div>
   );

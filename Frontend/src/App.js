@@ -3,6 +3,7 @@ import Entry from './components/Entry'
 import Notification from './components/Notification'
 import entryService from './services/entries'
 import Blog from './Blog'
+import FileUpload from './FileUpload'
 import TopNavBar from './TopNavBar'
 
 
@@ -101,7 +102,7 @@ const App = () => {
     <div>
     <TopNavBar />
     <Blog text = {exampleBook}/>
-    
+    <FileUpload />
     {
       /*
       <Notification message={errorMessage} />

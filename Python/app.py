@@ -1,6 +1,6 @@
 import os
 import PyPDF2
-from read_pdf import pdftojson
+from read_pdf import pdftojson, pdftojson2
 from fetch_word import give_definition, give_word2
 from flask import *
 from flask_cors import CORS
@@ -13,6 +13,23 @@ file_path = os.path.abspath(os.getcwd())+"\database.db"
 
 app = Flask(__name__)
 CORS(app) 
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return "No file part", 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return "No selected file", 400
+
+    # Now, you can process the file using PyPDF2 or any other library.
+    # For simplicity, we'll just return a success response here.
+    print(f'Hello world and hello {file.filename}')
+    text, dict = pdftojson2(file)
+    print(dict)
+    return jsonify({"message": "Flask: File uploaded successfully", "text":text,"dict":dict}), 200
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
