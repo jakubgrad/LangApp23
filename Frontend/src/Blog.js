@@ -29,7 +29,9 @@ const Blog = (props) => {
           entryService
           .getWord(word)
           .then(response => {
-            console.log(response)})
+            console.log(response)
+            setBoxOnTheRight(JSON.stringify(response))
+          })
         })
         .catch(err => {
           console.error('Error occurred again', err);
