@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function FileUpload() {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [statusOfUpload, setStatusOfUpload] = useState('');
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -21,6 +22,8 @@ function FileUpload() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Access the response from Flask
+        console.log("data.message, ", data.message); 
+        setStatusOfUpload(data.message)
         // You can update the React state or perform any other actions based on the response.
       })
         .catch((error) => {
@@ -31,6 +34,7 @@ function FileUpload() {
 
   return (
     <div>
+      <p>{statusOfUpload}</p>
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
     </div>
