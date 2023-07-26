@@ -8,6 +8,8 @@ import TopNavBar from './TopNavBar'
 
 
 const App = () => {
+  const localDevelopment = process.env.LOCAL_DEVELOPMENT //doesnt work
+  console.log(`Local development: ${localDevelopment}`);
   const exampleBook = require('./exampleBook.json') 
   console.log(exampleBook);
   const [entries, setEntries] = useState([

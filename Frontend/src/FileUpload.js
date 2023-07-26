@@ -12,7 +12,8 @@ function FileUpload() {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      const endpoint = `http://127.0.0.1:5000/upload`
+      //const endpoint = `http://127.0.0.1:5000/upload`
+      const endpoint = `https://langapp23flask.onrender.com/upload`;
       fetch(endpoint, {
         method: 'POST',
         body: formData,
