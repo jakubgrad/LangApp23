@@ -1,17 +1,45 @@
 import React from 'react';
 import './index.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BookList from './components/BookList';
 import entryService from './services/entries'
 import Word from './Word'
 import axios from 'axios'
+//import { response } from 'express';
 
 const Blog = (props) => {
+
+  
+  const title = props.title
+  const exampleBook = require('./exampleBook.json') 
   const [chosenWord, setChosenWord ] = useState('')
+  const [dict, setDict ] = useState(null)
+  const [book, setBook ] = useState(exampleBook)
   const [boxOnTheRight, setBoxOnTheRight ] = useState('')
   console.log(boxOnTheRight);
-  const exampleBook = props.text
-  console.log("blog", exampleBook);
+
+  useEffect(() => {
+    entryService
+    .getBook(title)
+    .then(response => {
+      console.log("GetBook succeeded!");
+      console.log(response);
+      if(response !== '') {
+        console.log("response has something");
+        console.log("response.pages");
+        console.log("response.pages[1]", response.pages[1]);
+        console.log(`response.pages["1"]`, response.pages["1"]);
+        setBook(response)
+      } else {
+      console.log("response empty");
+    }
+    })
+    .catch(err => console.log("GetBook failed"))
+  }, [])
+
+
+  
+
   const fetchWordDescription = (word) => {
     entryService
     .getWord(word)
@@ -52,12 +80,12 @@ console.log("caught an error in connecting through entryService");
     <div className="container">
       <BookList />
       <div className="content">
-        <h1>{exampleBook.title}</h1>
+        <h1>{book.title}</h1>
         <p>
-          {exampleBook.pages["1"].split(" ")
+          {book.pages[1].split(" ")
           .map(
             (word, index) => 
-            (<Word key = {index} word = {word} fetchWordDescription = {fetchWordDescription}/>)
+            (<Word key = {index} word = {word} base = {book.pageTranslations[1][word]} fetchWordDescription = {fetchWordDescription}/>)
           )}
         </p>
         {/* Add more paragraphs as needed */}

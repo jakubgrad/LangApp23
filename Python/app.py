@@ -31,6 +31,14 @@ def upload_file():
     print(dict)
     return jsonify({"message": "Flask: File uploaded successfully", "text":text,"dict":dict}), 200
 
+# Add OPTIONS route to handle preflight requests
+@app.route('/upload', methods=['OPTIONS'])
+def handle_options_request():
+    response = app.make_default_options_response()
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    return response
+
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy()

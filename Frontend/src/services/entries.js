@@ -4,8 +4,8 @@ import { mongo } from 'mongoose'
 const baseUrl = '/api/blogs'
 //langApp
 const getWord = (word) => {
-  const wo = word.slice(0, 2)
-  const request = axios.get(`api/blogs/letters/${wo}/${word}`)
+  const wo = word.toLowerCase().slice(0, 2)
+  const request = axios.get(`/api/blogs/letters/${wo}/${word.toLowerCase()}`)
   return request.then(response => response.data).catch(err => console.log("Could not get the word in the given form", err))
 }
 
@@ -17,6 +17,11 @@ const getAll = () => {
 
 const getBookList = () => {
   const request = axios.get(`${baseUrl}/booklist`)
+  return request.then(response => response.data)
+}
+
+const getBook = (title) => {
+  const request = axios.get(`${baseUrl}/book/${title}`)
   return request.then(response => response.data)
 }
 
@@ -42,5 +47,6 @@ export default {
   update,
   deleteById,
   getWord,
-  getBookList
+  getBookList,
+  getBook
 }

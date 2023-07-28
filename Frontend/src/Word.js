@@ -1,9 +1,11 @@
 const Word = (props) => {
+    const base = props.base
+    console.log("base: ", base);
     const word = props.word
     const fetchWordDescription = props.fetchWordDescription
     return <span onClick={() => 
         fetchWordDescription(
-            word
+            base    //this was, and in most cases should be, word!
             .replaceAll(".","")
             .replaceAll(",","")
             .replaceAll("(","")

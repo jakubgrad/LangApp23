@@ -7,8 +7,51 @@ import FileUpload from './FileUpload'
 import TopNavBar from './TopNavBar'
 import BookList from './components/BookList';
 
-const App = () => {
-    
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+  useParams } from 'react-router-dom';
+
+function About() {
+  return (
+    <div style={{ padding: 20 }}>
+      <h2>About View</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+    </div>
+  );
+}
+
+const Home = () => {
+  console.log("Wgat");
+  return (
+    <div style={{ padding: 20 }}>
+      <h2>Home View</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+    </div>
+  );
+}
+
+function Post() {
+  const { slug } = useParams();
+  //const post = BlogPosts[slug];
+  //if(!post) {
+   // return <span>The blog post you've requested doesn't exist.</span>;
+  //}
+  //const { title, description } = post;
+  return (
+    <div style={{ padding: 20 }}>
+      <h3>{slug}</h3>
+      <p>bruh</p>
+    </div>
+  );
+}
+
+const Main = () => {
+  const { slug } = useParams();
+  console.log(slug);
 //  const localDevelopment = process.env.LOCAL_DEVELOPMENT //doesnt work
   //console.log(`Local development: ${localDevelopment}`);
   const exampleBook = require('./exampleBook.json') 
@@ -103,11 +146,13 @@ const App = () => {
     }
 
   return (
+    
     <div>
     
     <div className="main-content">
     <TopNavBar />
-    <Blog text = {exampleBook}/>
+    
+    <Blog title = {slug}/>
     </div>
     <FileUpload />
     {
@@ -129,8 +174,22 @@ const App = () => {
         <input placeholder="Number" value={newNumber} onChange={handleNumberChange} />
         <button type="submit">save</button>
       </form>
-          */}
+          */
+         
+    }
     </div>
+  )
+}
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        {/*<Route path="/" element={<Main />} />*/}
+        <Route path="frontend/book/:slug" element={<Main />} />
+        <Route path="frontend/about" element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 

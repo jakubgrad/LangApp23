@@ -33,6 +33,14 @@ notesRouter.get('/booklist', (request, response) => {
 	}).catch(err => console.log("Failed to send titles", err))
 })
 
+notesRouter.get('/book/:title', (request, response) => {
+	const title = request.params.title;
+	Text.find({title:title}).then(entries => {
+		const result = entries.find(e => e.title === title) 
+		response.send(result)
+	}).catch(err => console.log("Failed to send the book", err))
+})
+
 notesRouter.post('/mongonew', (request, response, next) => {
 	const body = request.body
 

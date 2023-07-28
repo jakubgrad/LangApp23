@@ -10,6 +10,7 @@ const middleware = require('./utils/middleware')
 //const blogsRouter = require('./models/blog')
 const mongoose = require('mongoose')
 const Blog = require('./models/blog')
+const path = require('path'); // Make sure you have this line
 app.use(express.static('build')) //added this to integrate frontend from 3.22. This is the only line connecting directly the frotend to the original 4.12
 mongoose.set('strictQuery', false)
 
@@ -35,6 +36,11 @@ app.use(middleware.requestLogger)
 
 app.use('/api/blogs', notesRouter) 
 //app.use('/build', notesRouter) //added to make the frontend from 3.22 work 24.07 
+
+// Define your frontend catch-all route
+app.get('/frontend/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
