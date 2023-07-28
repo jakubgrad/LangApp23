@@ -5,11 +5,12 @@ import entryService from './services/entries'
 import Blog from './Blog'
 import FileUpload from './FileUpload'
 import TopNavBar from './TopNavBar'
-
+import BookList from './components/BookList';
 
 const App = () => {
-  const localDevelopment = process.env.LOCAL_DEVELOPMENT //doesnt work
-  console.log(`Local development: ${localDevelopment}`);
+    
+//  const localDevelopment = process.env.LOCAL_DEVELOPMENT //doesnt work
+  //console.log(`Local development: ${localDevelopment}`);
   const exampleBook = require('./exampleBook.json') 
   console.log(exampleBook);
   const [entries, setEntries] = useState([
@@ -27,9 +28,10 @@ const App = () => {
     entryService
       .getAll()
       .then(initialEntries => {
-        console.log("MongoDB connection successful");
+        console.log(" connection successful");
         setEntries(initialEntries)
       })
+      .catch(err => console.log("Couldn't connect",err))
   }, [])
 
   const addEntry = (event) => {
@@ -102,8 +104,11 @@ const App = () => {
 
   return (
     <div>
+    
+    <div className="main-content">
     <TopNavBar />
     <Blog text = {exampleBook}/>
+    </div>
     <FileUpload />
     {
       /*

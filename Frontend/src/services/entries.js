@@ -1,5 +1,7 @@
 import axios from 'axios'
-const baseUrl = '/api/notes'
+import { mongo } from 'mongoose'
+//import BookList from '../components/BookList'
+const baseUrl = '/api/blogs'
 //langApp
 const getWord = (word) => {
   const wo = word.slice(0, 2)
@@ -13,8 +15,13 @@ const getAll = () => {
   return request.then(response => response.data)
 }
 
+const getBookList = () => {
+  const request = axios.get(`${baseUrl}/booklist`)
+  return request.then(response => response.data)
+}
+
 const create = newObject => {
-  const request = axios.post(baseUrl, newObject)
+  const request = axios.post(`${baseUrl}/mongonew`, newObject)
   return request.then(response => response.data)
 }
 
@@ -34,5 +41,6 @@ export default {
   create, 
   update,
   deleteById,
-  getWord
+  getWord,
+  getBookList
 }

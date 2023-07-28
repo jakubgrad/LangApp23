@@ -1,10 +1,10 @@
 const notesRouter = require('express').Router()
-const Blog = require('../models/blog')
+const Text = require('../models/blog')
 const axios = require('axios')
 
 notesRouter.get('/', async (request, response) => {
-	const blogs = await Blog.find({})
-	response.json(blogs)
+	const texts = await Text.find({})
+	response.json(texts)
 })
   
 notesRouter.post('/', async (request, response) => {
@@ -17,6 +17,78 @@ notesRouter.post('/', async (request, response) => {
 		response.status(201).json(savedBlog)
 	}
 })
+
+notesRouter.get('/mongo/', (request, response) => {
+	Blog.find({}).then(entries => {
+		const number = entries.length
+		const date = new Date()
+		response.send(`Phonebook has info for ${number} people <br/ > <br/ >${date}. Phonebook ${entries}`)
+	}).catch(err => console.log("fial", err))
+})
+
+notesRouter.get('/booklist', (request, response) => {
+	Text.find({}).then(entries => {
+		const titles = entries.map(e => e.title) 
+		response.send(titles)
+	}).catch(err => console.log("Failed to send titles", err))
+})
+
+notesRouter.post('/mongonew', (request, response, next) => {
+	const body = request.body
+
+	if (body.title === undefined || body.author === undefined) {
+		return response.status(400).json({ error: 'name or number missing' })
+	}
+
+	const text = new Text({
+		title:body.title,
+		author:body.author,
+		pages: {
+			"1":body.pages["1"]
+		},
+		pageTranslations: {
+			"1":body.pageTranslations["1"]
+		}
+	})
+	console.log("text: ", text);
+
+	text.save()
+		.then(savedEntry => {
+			response.json(savedEntry)
+		})
+		.catch(error => next(error))
+})
+
+notesRouter.get('/mongop', (request, response, next) => {
+	/*const body = request.body
+
+	if (body.name === undefined || body.number === undefined) {
+		return response.status(400).json({ error: 'name or number missing' })
+	}
+	*/
+	const text = new Text({
+		title:"Harry Spotter",
+		author:"JK O.N.U. Rowling",
+		pages: {
+			"1":"Hansin tavallinen päivä. aakkosellisuus Aakko Herään arkisin aina kello 7. Pidän rauhallisista aamuista, joten herään yleensä ajoissa. Viikonloppuisin saatan nukkua hieman pidempään. Aamulla teen aamupalaa ja keitän kahvin. Aamupalaa syön lukiessa päivän lehteä. Yleensä syön kaurapuuroa lisukkeilla, mutta joskus saatan tehdä voileivän tai syödä jugurttia myslillä.Sitten vaihdan vaatteet ja valmistaudun työpäivään. Työpäivä alkaa kello 9, joten lähden kotoa aina kello 8:30. Menen töihin linja-autolla. Aamuisin on yleensä ruuhkaa ja bussi on melkein aina täynnä. Joskus olen töissä vasta kello 9:10. Päivällä käyn työkavereiden kanssa lounaalla ravintolassa. Olen töissä kello 17 asti. Onneksi en jää koskaan ylitöihin. Töiden jälkeen hoidan usein keskustassa asioita, käyn kaupassa tai tapaan ystäviä. Sitten menen kotiin. Joskus käyn illalla kuntosalilla, katson televisiota tai luen kirjaa. Joskus teen vähän töitä kotona illalla. Joko minä tai tyttöystäväni tekee illallisen - yleensä vuorottelemme. Illalla katsomme aina kymmenen uutiset ja sen jälkeen aloitamme iltapuuhat ja menemme nukkumaan."  
+		},
+		pageTranslations: {
+			"1":{
+				"Hansin":"Hansi",
+				"tavallinen":"tavallinen",
+				"päivä":"päivä"
+			}
+		}
+	})
+
+	text.save()
+		.then(savedEntry => {
+			response.json(savedEntry)
+		})
+		.catch(error => next(error))
+})
+
+
 
 notesRouter.get('/letters/displayallwords/:firstTwoLetters', (req, res) => {
 	const firstTwoLetters = req.params.firstTwoLetters;

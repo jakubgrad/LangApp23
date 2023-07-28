@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  transition: top 0.3s; /* Add smooth transition when showing/hiding */
+  transition: top 0.1s; /* Add smooth transition when showing/hiding */
 }
 
 .top-navbar ul {
@@ -25,7 +25,7 @@
   color: #fff;
   text-decoration: none;
   font-size: 26px;
-  transition: color 0.3s;
+  transition: color 0.01s;
 }
 
 .top-navbar a:hover {
@@ -66,3 +66,4 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+

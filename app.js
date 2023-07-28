@@ -20,6 +20,13 @@ logger.info('connecting to', config.MONGODB_URI)
 //const mongoUrl = 'mongodb+srv://fullstack:merc1234@firstcluster.o20unys.mongodb.net/?retryWrites=true&w=majority'
 const mongoUrl = config.MONGODB_URI
 mongoose.connect(mongoUrl)
+mongoose.connect(mongoUrl)
+  .then(() => {
+    logger.info('connected to MongoDB')
+  })
+  .catch((error) => {
+    logger.error('error connecting to MongoDB:', error.message)
+  })
 
 app.use(cors())
 app.use(express.json())

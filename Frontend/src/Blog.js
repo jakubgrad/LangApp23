@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { useState } from 'react'
+import BookList from './components/BookList';
 import entryService from './services/entries'
 import Word from './Word'
 import axios from 'axios'
@@ -49,6 +50,7 @@ console.log("caught an error in connecting through entryService");
   }
   return (
     <div className="container">
+      <BookList />
       <div className="content">
         <h1>{exampleBook.title}</h1>
         <p>

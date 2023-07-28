@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  background-color:aliceblue;
+}
+
 h1 {
   color: green;
   font-style: italic;
@@ -19,18 +24,22 @@ h1 {
   margin-bottom: 10px;
 }
 
-container {
+
+.main-content {
+  padding: 0;
+}
+.container {
   display: flex;
   justify-content: center; /* Center both content and box horizontally */
-  padding: 20px;
-  margin-top: 60px; /* Add spacing between the top navigation bar and the content */
+  padding: 20px 20px 20px 0;
+  /*margin-top: 60px; /* Add spacing between the top navigation bar and the content */
 }
 
 .content {
   text-align: justify;
   text-justify: inter-word;
-  width: 50%;
-  margin-right: 10px; /* Add some space between content and box */
+  width: 30%;
+  margin-right: 40px; /* Add some space between content and box */
   border: 1px solid #ccc; /* Add a border to the content */
   padding: 20px;
   box-sizing: border-box;
@@ -39,7 +48,8 @@ container {
 
 .box {
   margin-top: 60px;
-  width: 45%;
+  margin-left: 40px;
+  width: 20%;
   background-color: #f0f0f0;
   border: 1px solid #ccc; /* Add a border to the box */
   padding: 20px;
