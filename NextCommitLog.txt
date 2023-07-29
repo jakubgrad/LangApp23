@@ -1,0 +1,1 @@
+Added comments to entries.js and blogs.js (which route requests to correct resources). Eslinted files

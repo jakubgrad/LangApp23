@@ -21,9 +21,11 @@
 }
 
 .book-list li {
-  font-size: 16px;
+  font-size: 26px;
   margin-bottom: 5px;
+  text-decoration: none;
 }
+
 
 /* Styles for not visited links */
 a {

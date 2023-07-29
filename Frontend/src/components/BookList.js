@@ -17,7 +17,7 @@ const BookList = () => {
   }, [])
   return (
     <div className={stylesBookList['book-list']}>
-      <h3>Books on the shelf</h3>
+      {/*<h3>Books on the shelf</h3>*/}
       <ul>
         {titles.length === 0
         ? <li>Loading...</li>

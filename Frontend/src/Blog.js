@@ -55,17 +55,13 @@ const ComponentWithDescription = (props) => {
   );
 };
 
-const Blog = (props) => {
-
-  
-  const title = props.title
+const Blog = (props) => { //Blog is called from App.js
+  const title = props.title //title of wanted book
   console.log("slug aka title in Blog.js", title)
   const exampleBook = require('./exampleBook.json') 
-  const [chosenWord, setChosenWord ] = useState('')
   const [description, setDescription ] = useState('start_value')
-  const [dict, setDict ] = useState(null)
   const [book, setBook ] = useState(exampleBook)
-  const [boxOnTheRight, setBoxOnTheRight ] = useState('')
+  // eslint-disable-next-line no-unused-vars
   const [clicked, setClicked ] = useState('') //for making the box on the right highlighted when a word is clicked
 
   useEffect(() => {
@@ -122,7 +118,6 @@ const Blog = (props) => {
           .then(response => {
             console.log(response)
             setDescription(response)
-            setBoxOnTheRight(JSON.stringify(response))
           })
         })
         .catch(err => {
@@ -131,7 +126,6 @@ const Blog = (props) => {
       } else {
         console.log("Response from engine", response)
         setDescription(response)
-        setBoxOnTheRight(JSON.stringify(response))
       }
     })
     .catch(err => {
@@ -156,7 +150,6 @@ console.log("caught an error in connecting through entryService");
       </div>
       <div className="box">
         <ComponentWithDescription data = {description} />
-        {/*<p>bb{boxOnTheRight}</p>*/}
       </div>
     </div>
   );

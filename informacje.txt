@@ -1,1 +1,0 @@
-Dodałem express static build do app.js żeby frontend zaczął działać. Przynajmniej na początku działało.
