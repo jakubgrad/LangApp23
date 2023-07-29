@@ -88,12 +88,6 @@ const Blog = (props) => { //Blog is called from App.js
   
 
   const fetchWordDescription = (word2) => {
-    setClicked(true);
-
-    // Reset the clicked style after 1 second
-    setTimeout(() => {
-      setClicked(false);
-    }, 1000);
     
     console.log("fetchWordDescription word2: ", word2);
     const word = book.pageTranslations[1][word2]
