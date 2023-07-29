@@ -66,6 +66,7 @@ const Blog = (props) => {
   const [dict, setDict ] = useState(null)
   const [book, setBook ] = useState(exampleBook)
   const [boxOnTheRight, setBoxOnTheRight ] = useState('')
+  const [clicked, setClicked ] = useState('') //for making the box on the right highlighted when a word is clicked
 
   useEffect(() => {
     entryService
@@ -91,6 +92,13 @@ const Blog = (props) => {
   
 
   const fetchWordDescription = (word2) => {
+    setClicked(true);
+
+    // Reset the clicked style after 1 second
+    setTimeout(() => {
+      setClicked(false);
+    }, 1000);
+    
     console.log("fetchWordDescription word2: ", word2);
     const word = book.pageTranslations[1][word2]
     console.log("fetchWordDescription word: ", word);

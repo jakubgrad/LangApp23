@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import entries from './services/entries';
 import styles from './FileUpload.module.css';
+import TopNavbar from './TopNavBar';
 
 
 function FileUpload() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [statusOfUpload, setStatusOfUpload] = useState('');
+  const [statusOfUpload, setStatusOfUpload] = useState('Note! It might take a minute to upload and process your pdf file');
   const [newAuthor, setNewAuthor] = useState('');
   const [newTitle, setNewTitle] = useState('');
 
@@ -112,6 +113,7 @@ function FileUpload() {
 
   return (
     <div className={styles.container}>
+      <TopNavbar/>
       <p className={statusOfUpload === "" ? "" : styles.status}>{
       statusOfUpload
       }</p>
