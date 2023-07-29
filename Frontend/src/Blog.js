@@ -7,16 +7,65 @@ import Word from './Word'
 import axios from 'axios'
 //import { response } from 'express';
 
+const ComponentWithDescription = (props) => {
+  console.log(`props.data: ${!props.data}`)
+  const data = props.data
+  console.log(`data: ${data}`);
+  if (data === "start_value") {
+    return <div>Description of the word will appear here!</div>;
+  }
+  if (!data || !data.senses || data.senses.length === 0) {
+    // Handle the case when data or senses array is empty or undefined
+    return <div>No valid data available for this word.</div>;
+  }
+
+  const { senses } = data;
+
+  return (
+    <div>
+      <h2>{data.word.toUpperCase()}</h2>
+      <h3>Meanings:</h3>
+      {senses.map((sense, index) => (
+        <div key={index}>
+          {sense.glosses && sense.glosses.length > 0 ? (
+            <ul>
+              {sense.glosses.map((gloss, index) => (
+                <li key={index}>{gloss}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>No meanings available.</p>
+          )}
+        </div>
+      ))}
+
+
+{data.synonyms && data.synonyms.length > 0 ? (
+  <>
+  <h3>Synonyms:</h3>
+  <ul>
+    {data.synonyms.map((synonym, index) => (
+      <li key={index}>{synonym.word}</li>
+    ))}
+  </ul></>
+) : (
+  <p>{/*No synonyms available.*/}</p>
+)}
+    </div>
+  );
+};
+
 const Blog = (props) => {
 
   
   const title = props.title
+  console.log("slug aka title in Blog.js", title)
   const exampleBook = require('./exampleBook.json') 
   const [chosenWord, setChosenWord ] = useState('')
+  const [description, setDescription ] = useState('start_value')
   const [dict, setDict ] = useState(null)
   const [book, setBook ] = useState(exampleBook)
   const [boxOnTheRight, setBoxOnTheRight ] = useState('')
-  console.log(boxOnTheRight);
 
   useEffect(() => {
     entryService
@@ -29,6 +78,7 @@ const Blog = (props) => {
         console.log("response.pages");
         console.log("response.pages[1]", response.pages[1]);
         console.log(`response.pages["1"]`, response.pages["1"]);
+        console.log(`response.pageTranslations["1"]`, response.pageTranslations["1"]);
         setBook(response)
       } else {
       console.log("response empty");
@@ -40,7 +90,11 @@ const Blog = (props) => {
 
   
 
-  const fetchWordDescription = (word) => {
+  const fetchWordDescription = (word2) => {
+    console.log("fetchWordDescription word2: ", word2);
+    const word = book.pageTranslations[1][word2]
+    console.log("fetchWordDescription word: ", word);
+    console.log(word)
     entryService
     .getWord(word)
     .then(response => {
@@ -59,6 +113,7 @@ const Blog = (props) => {
           .getWord(word)
           .then(response => {
             console.log(response)
+            setDescription(response)
             setBoxOnTheRight(JSON.stringify(response))
           })
         })
@@ -67,6 +122,7 @@ const Blog = (props) => {
         });
       } else {
         console.log("Response from engine", response)
+        setDescription(response)
         setBoxOnTheRight(JSON.stringify(response))
       }
     })
@@ -91,8 +147,8 @@ console.log("caught an error in connecting through entryService");
         {/* Add more paragraphs as needed */}
       </div>
       <div className="box">
-        <h2>{boxOnTheRight}Box on the right</h2>
-        <p>bb{boxOnTheRight}</p>
+        <ComponentWithDescription data = {description} />
+        {/*<p>bb{boxOnTheRight}</p>*/}
       </div>
     </div>
   );

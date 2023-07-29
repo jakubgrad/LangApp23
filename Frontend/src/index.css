@@ -29,9 +29,9 @@ h1 {
   padding: 0;
 }
 .container {
-  display: flex;
-  justify-content: center; /* Center both content and box horizontally */
-  padding: 20px 20px 20px 0;
+  display: flex; 
+  /*justify-content: center; /* Center both content and box horizontally */
+  padding: 0px;
   /*margin-top: 60px; /* Add spacing between the top navigation bar and the content */
 }
 
@@ -39,7 +39,8 @@ h1 {
   text-align: justify;
   text-justify: inter-word;
   width: 30%;
-  margin-right: 40px; /* Add some space between content and box */
+  margin-top: 20px;
+  margin-right: 30px; /* Add some space between content and box */
   border: 1px solid #ccc; /* Add a border to the content */
   padding: 20px;
   box-sizing: border-box;
@@ -47,8 +48,8 @@ h1 {
 }
 
 .box {
-  margin-top: 60px;
-  margin-left: 40px;
+  margin-top: 20px;
+  margin-left: 30px;
   width: 20%;
   background-color: #f0f0f0;
   border: 1px solid #ccc; /* Add a border to the box */

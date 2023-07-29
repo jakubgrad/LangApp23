@@ -1,15 +1,29 @@
 {
     "title":"Harry Spotter",
-    "author":"JK O.N.U. Rowling",
+    "author":"JK Rowing",
     "pages": {
-        "1":"Hansin tavallinen päivä. aakkosellisuus Aakko Herään arkisin aina kello 7. Pidän rauhallisista aamuista, joten herään yleensä ajoissa. Viikonloppuisin saatan nukkua hieman pidempään. Aamulla teen aamupalaa ja keitän kahvin. Aamupalaa syön lukiessa päivän lehteä. Yleensä syön kaurapuuroa lisukkeilla, mutta joskus saatan tehdä voileivän tai syödä jugurttia myslillä.Sitten vaihdan vaatteet ja valmistaudun työpäivään. Työpäivä alkaa kello 9, joten lähden kotoa aina kello 8:30. Menen töihin linja-autolla. Aamuisin on yleensä ruuhkaa ja bussi on melkein aina täynnä. Joskus olen töissä vasta kello 9:10. Päivällä käyn työkavereiden kanssa lounaalla ravintolassa. Olen töissä kello 17 asti. Onneksi en jää koskaan ylitöihin. Töiden jälkeen hoidan usein keskustassa asioita, käyn kaupassa tai tapaan ystäviä. Sitten menen kotiin. Joskus käyn illalla kuntosalilla, katson televisiota tai luen kirjaa. Joskus teen vähän töitä kotona illalla. Joko minä tai tyttöystäväni tekee illallisen - yleensä vuorottelemme. Illalla katsomme aina kymmenen uutiset ja sen jälkeen aloitamme iltapuuhat ja menemme nukkumaan."  
+        "1":"Vaarallinen velho Sirius Musta on paennut Azkabanin vankilasta, mistä yksikään vanki ei ole koskaan ennen onnistunut pakenemaan. Sirius Musta on vuosia aiemmin tuomittu kolmentoista ihmisen murhasta, ja nyt hän on vapaalla jalalla. Kaikki merkit viittaavat siihen, että hän haluaa etsia käsiinsä Harry Potterin. Taikaministeriö on valppaana ja Tylypahkan velhojen ja noitien koulussa kiristetään turvatoimia. Koulun porteille värvätään vartioimaan Azkabanin vanginvartiat, kauhistuttavat ankeuttajat. Harry luottaa Tylypahkan muurien suojaan ja rehtori Dumbledoreen, mutta onko hän turvassa edes Tylypahkassa? Miksi Sirius Musta etsii juuri Harrya? Entä miksi ankeuttajien läsnäolo vaikuttaa Harryyn paljon voimakkaammin kuin muihin? Mysteeri johdattaa ystävykset Harryn, Ronin ja Hermionen uskomattoman lennokkaan seikkailun pyörteisiin."  
     },
     "pageTranslations": {
         "1":{
-            "Hansin":"Hansi",
-            "tavallinen":"tavallinen",
-            "päivä":"päivä"
-        }
+            "Azkabanin":"There were no results matching the query",
+            "Dumbledoreen,":"There were no results matching the query",
+            "Entä":"entä","Harry":"g=\"en\" dir=\"ltr\">\n",
+            "HarryPotterin":"There were no results matching the query",
+            "Harrya?":"lang=\"en\" dir=\"ltr\">\n",
+            "Harryn,":"lang=\"en\" dir=\"ltr\">\n",
+            "Harryyn":"lang=\"en\" dir=\"ltr\">\n",
+            "Hermionen":"lang=\"en\" dir=\"ltr\">\n",
+            "Kaikki":"kaikki","Koulun":"koulu",
+            "Miksi":"mikä","Musta":"minä",
+            "Mysteerijohdattaa":"There were no results matching the query",
+            "Ronin":"g=\"en\" dir=\"ltr\">\n",
+            "Sirius":"g=\"en\" dir=\"ltr\">\n",
+            "T":"tavu",
+            "Tylypahkan":"Tylypahka",
+            "Tylypahkanmuurien":"There were no results matching the query",
+            "Vaarallinen":"vaarallinen",
+            "aikaministeriö":"There were no results matching the query","ankeuttajat":"There were no results matching the query","ankeuttajienläsnäolo":"There were no results matching the query","edesT":"lang=\"en\" dir=\"ltr\">\n","ei":"ei","ennen":"ennen","etsia":"etsiä","etsii":"etsiä","että":"että","haluaa":"haluta","hän":"hän","ihmisen":"ihminen","ja":"nish","juuri":"taikinajuuri","kauhistuttavat":"kauhistuttava","kiristetään":"kiristää","kolmentoista":"kolmetoista","koskaan":"koskaan","kuin":"kuu","käsiinsä":"käsi","lennokkaanseikkailun":"There were no results matching the query","luottaa":"luotta","merkit":"merkki","miksi":"mikä","mistä":"mikä","muihin?":"muihin","murhasta,":"murhasta","mutta":"mutta","noitienkoulussa":"There were no results matching the query","nyt":"nyt","ole":"olla","on":"olla","onko":"olla","onnistunut":"onnistua","paennut":"paeta","pakenemaan":"paeta","paljon":"paljo","porteille":"portti","pyörteisiin":"pyörre","rehtori":"rehtori","siihen,":"","suojaan":"suojata","tuomittu":"tuomita","turvassa":"turva","turvatoimia":"turvatoimi","uskomattoman":"uskomaton","vaikuttaa":"vaikuttaa","valppaana":"lang=\"en\" dir=\"ltr\">\n","vanginvartiat":"There were no results matching the query","vankilasta":"vankilasta","vapaallajalalla":"There were no results matching the query","vartioimaanAzkabanin":"There were no results matching the query","velho":"velho","velhojen":"velho","viittaavat":"viitata","voimakkaammin":"voimakkaasti","vuosiaaiemmin":"There were no results matching the query","värvätään":"värvätä","yksikäänvanki":"There were no results matching the query","ylypahkassa?":"There were no results matching the query","ystävykset":"ystävykset"}
     }
     
 

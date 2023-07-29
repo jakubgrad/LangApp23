@@ -5,7 +5,7 @@
   padding: 20px;
   width: 70px; /* Adjust the width as needed */
   margin-right: 30px;
-  margin-left: 0;
+  margin-left: 0px;
   text-justify: center;
 }
 
@@ -23,4 +23,21 @@
 .book-list li {
   font-size: 16px;
   margin-bottom: 5px;
+}
+
+/* Styles for not visited links */
+a {
+  color: #fff;
+  text-decoration: none; /* Remove default underline for links */
+}
+
+/* Styles for visited links */
+a:visited {
+  color: #fff;
+}
+
+/* Styles for hover state of links */
+a:hover {
+  color: #fff;
+  text-decoration: underline; /* Add underline on hover */
 }

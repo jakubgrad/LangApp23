@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './TopNavbar.css';
 
 const TopNavbar = () => {
+  
   const [showNavbar, setShowNavbar] = useState(true);
-
+/*
   const handleScroll = () => {
     const scrollY = window.scrollY;
     setShowNavbar(scrollY === 0);
@@ -15,13 +16,14 @@ const TopNavbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+*/
   return (
     <nav className={`top-navbar ${showNavbar ? '' : 'hidden'}`}>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href = {`/frontend/book/HarryPotter`}>Example</a></li>
+        <li><a href = {`/frontend/about`}>About</a></li>
+        <li><a href = {`/frontend/upload`}>Upload</a></li>
+        <li><a href = {`/frontend/contact`}>Contact</a></li>
         {/* Add more links as needed */}
       </ul>
     </nav>

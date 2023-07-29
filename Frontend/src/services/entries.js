@@ -21,6 +21,7 @@ const getBookList = () => {
 }
 
 const getBook = (title) => {
+  console.log("getBook says: making request to ");
   const request = axios.get(`${baseUrl}/book/${title}`)
   return request.then(response => response.data)
 }

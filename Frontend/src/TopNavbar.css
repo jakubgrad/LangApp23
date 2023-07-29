@@ -1,7 +1,7 @@
 .top-navbar {
   background-color: #333;
   padding: 10px;
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 0;
   width: 100%;
@@ -39,14 +39,14 @@
 
 /* Add space between the top navbar and content */
 .content {
-  margin-top: 60px; /* Adjust this value as needed */
+  margin-top: 0px; /* Adjust this value as needed */
 }
 
 /* Add space between the two boxes */
 .container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  padding: 0;
 }
 
 .content {

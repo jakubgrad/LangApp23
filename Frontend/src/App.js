@@ -3,8 +3,10 @@ import Entry from './components/Entry'
 import Notification from './components/Notification'
 import entryService from './services/entries'
 import Blog from './Blog'
-import FileUpload from './FileUpload'
+//import FileUpload from './FileUpload'
 import TopNavBar from './TopNavBar'
+import FileUpload from './FileUpload'
+import OldFileUpload from './oldFileUpload'
 import BookList from './components/BookList';
 
 import {
@@ -154,7 +156,7 @@ const Main = () => {
     
     <Blog title = {slug}/>
     </div>
-    <FileUpload />
+    
     {
       /*
       <Notification message={errorMessage} />
@@ -188,6 +190,7 @@ const App = () => {
         {/*<Route path="/" element={<Main />} />*/}
         <Route path="frontend/book/:slug" element={<Main />} />
         <Route path="frontend/about" element={<About />} />
+        <Route path="frontend/upload" element={<FileUpload />} />
       </Routes>
     </Router>
   )

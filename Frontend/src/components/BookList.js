@@ -23,7 +23,7 @@ const BookList = () => {
         :
           titles.map(
             (title, index) => 
-            (<a href = {`/${title}`}><li key = {index}>{title}</li></a>)
+            (<a href = {`/frontend/book/${title}`}><li key = {index}>{title}</li></a>)
           )
         }
         {/* Add more book names as needed */}
