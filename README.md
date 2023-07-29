@@ -21,7 +21,7 @@ Check out the live application at https://langapp23.onrender.com/frontend/about 
 # Optimizing Wiktionary Search
 The hybrid approach of the current application has serious disadvantages, especially in terms of memory efficiency and speed when making requests to Wiktionary for each word in a PDF. To address this problem, I'm in the process of implementing a better approach:
 
-Using a Flask Python server with direct access to the Wiktionary dump.
+* Using a Flask Python server with direct access to the Wiktionary dump.
 
 This new approach will allow a more efficient search for the basic form of a word in the Wiktionary dump without the need for additional searches for the full description. By directly accessing the relevant information, valuable processing time will be saved and the overall performance of the application will enhance.
 
