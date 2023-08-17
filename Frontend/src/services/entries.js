@@ -4,7 +4,7 @@ const baseUrl = '/api/blogs'
 //basic request to backend for a clicked word, requested from Blog.js
 const getWord = (word) => {
   const wo = word.toLowerCase().slice(0, 2)
-  const request = axios.get(`/api/blogs/letters/${wo}/${word.toLowerCase()}`)
+  const request = axios.get(`/api/blogs/letters/${wo.toLowerCase()}/${word.toLowerCase()}`)
   return request.then(response => response.data).catch(err => console.log("Could not get the word in the given form", err))
 }
 
@@ -17,6 +17,12 @@ const getAll = () => {
 //returns titles of books, used in BookList.js
 const getBookList = () => {
   const request = axios.get(`${baseUrl}/booklist`)
+  return request.then(response => response.data)
+}
+
+//get full information about a book
+const getBySearch = (title) => {
+  const request = axios.get(`${baseUrl}/book/${title}`)
   return request.then(response => response.data)
 }
 
@@ -37,5 +43,6 @@ export default {
   create, 
   getWord,
   getBookList,
-  getBook
+  getBook,
+  getBySearch
 }

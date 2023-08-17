@@ -98,6 +98,7 @@ const Blog = (props) => { //Blog is called from App.js
     .then(response => {
       if( response === undefined) {
         console.log("Could not fetch word description using this form of the word", word)
+        return
       //const endpoint = `http://127.0.0.1:5000/pygetword/${encodeURI(word)}`;
       const endpoint = `https://langapp23flask.onrender.com/pygetword/${encodeURI(word)}`;
       console.log(`Sending requests to ${endpoint}`);

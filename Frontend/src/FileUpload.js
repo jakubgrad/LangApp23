@@ -40,8 +40,9 @@ function FileUpload() {
         return
       }
       setStatusOfUpload('Uploading to flask server...');
-      //const endpoint = `http://127.0.0.1:5000/upload`
-      const endpoint = `https://langapp23flask.onrender.com/upload`;
+      const endpoint = `http://127.0.0.1:5000/upload`
+      //const endpoint = `https://langapp23flask.onrender.com/upload`;
+      //const endpoint = http://langapp23.ddns.net:3003/upload
       fetch(endpoint, {
         method: 'POST',
         body: formData,
