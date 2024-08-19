@@ -25,7 +25,7 @@ The hybrid approach of the current application has serious disadvantages, especi
 
 This new approach will allow a more efficient search for the basic form of a word in the Wiktionary dump without the need for additional searches for the full description. By directly accessing the relevant information, valuable processing time will be saved and the overall performance of the application will enhance.
 
-# Join the Journey
+# Feedback
 If you have any suggestions, ideas, or would like to contribute, feel free to open an issue or submit a pull request!
 
 Thank you for your interest in the project!
